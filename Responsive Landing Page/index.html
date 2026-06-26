@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unique Landing Page</title>
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #111;
+      color: #eee;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: transparent;
+      transition: background 0.4s ease;
+      z-index: 1000;
+    }
+    nav.scrolled { background: rgba(0,0,0,0.8); }
+    nav .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      background: linear-gradient(45deg, #ff6ec4, #7873f5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    nav ul { list-style: none; display: flex; gap: 25px; }
+    nav ul li a {
+      text-decoration: none;
+      color: #eee;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover { color: #ff6ec4; }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #ff6ec4, #7873f5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 2s infinite alternate;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      color: #ccc;
+      animation: fadeInUp 2s ease;
+    }
+    .hero button {
+      margin-top: 30px;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      background: #ff6ec4;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .hero button:hover {
+      transform: scale(1.1);
+      background: #7873f5;
+    }
+
+    /* Floating Shapes */
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.3;
+      animation: float 6s infinite ease-in-out;
+    }
+    .shape.one { width: 150px; height: 150px; background: #ff6ec4; top: 10%; left: 15%; }
+    .shape.two { width: 200px; height: 200px; background: #7873f5; bottom: 15%; right: 10%; animation-delay: 2s; }
+    .shape.three { width: 100px; height: 100px; background: #00c9ff; top: 60%; left: 5%; animation-delay: 4s; }
+
+    /* Sections */
+    section {
+      padding: 100px 20px;
+      text-align: center;
+    }
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      background: linear-gradient(45deg, #00c9ff, #92fe9d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeInUp 1.5s ease;
+    }
+    section p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1rem;
+      color: #bbb;
+      animation: fadeInUp 2s ease;
+    }
+
+    /* Animations */
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff6ec4; }
+      to { text-shadow: 0 0 20px #7873f5; }
+    }
+    @keyframes fadeInUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-30px); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="logo">UniqueSite</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <h1>Hello, I'm Harish</h1>
+    <p>This is a unique landing page with glowing text, floating shapes, and smooth animations.</p>
+    <button id="getStarted">Explore Now</button>
+    <div class="shape one"></div>
+    <div class="shape two"></div>
+    <div class="shape three"></div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi, I'm Harish, a passionate Computer Science Engineering student at St. Joseph's College of Engineering. I have a strong interest in web development, programming, and software development. I enjoy creating modern, responsive, and user-friendly websites using HTML, CSS, JavaScript, and other technologies.
+
+I am constantly learning new skills and working on projects that help me improve my problem-solving abilities and technical knowledge. My goal is to build innovative digital solutions and grow as a software developer. I am enthusiastic about exploring new technologies, contributing to meaningful projects, and continuously enhancing my expertise in the field of computer science.
+</p>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <h2>Services</h2>
+    <p>### My Services
+
+🌐 **Web Development**
+
+* Design and develop responsive, modern, and user-friendly websites using HTML, CSS, and JavaScript.
+
+🎨 **Frontend Development**
+
+* Create attractive user interfaces with smooth animations, interactive elements, and mobile-friendly layouts.
+
+💻 **Programming Solutions**
+
+* Develop programs and solve coding problems using C, C++, Java, and Python.
+
+📱 **Responsive Design**
+
+* Ensure websites work perfectly across desktops, tablets, and mobile devices.
+
+🚀 **Portfolio & Personal Websites**
+
+* Build professional portfolio websites for students, freelancers, and professionals.
+
+🔧 **Website Maintenance**
+
+* Update, improve, and optimize existing websites for better performance and user experience.
+</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>### Contact Me
+
+📧 Email: [harish@gmail.com](mailto:harish@gmail.com)
+
+📱 Phone: +91 1234567890
+
+📍 Location: Chennai, Tamil Nadu, India
+
+
+</p>
+  </section>
+
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Button click
+    document.getElementById('getStarted').addEventListener('click', () => {
+      window.scrollTo({ top: document.getElementById('about').offsetTop, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
